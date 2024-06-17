@@ -64,6 +64,10 @@ function TeamChatClient.Init()
 			end
 		end
 		
+		if not AudioUtil.IsVoiceEnabledForTeam(LocalPlayer.Team) then
+			return
+		end
+		
 		for _, Player in PlayerService:GetPlayers() do
 			task.spawn(SetupWiring, Player)
 		end
@@ -90,6 +94,11 @@ function TeamChatClient.Init()
 			return
 		end
 		ElapsedTimeSinceLastInterval = 0
+		
+		-- don't waste networking resources if voice chat is disabled
+		if not AudioUtil.IsVoiceEnabledForTeam(LocalPlayer.Team) then
+			return
+		end
 		
 		local AudioDeviceInput = AudioUtil.GetPlayersAudioDeviceInput(LocalPlayer)
 		local AudioAnalyzer = AudioDeviceInput:WaitForChild('AudioAnalyzer')
