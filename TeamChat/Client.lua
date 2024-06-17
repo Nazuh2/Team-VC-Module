@@ -55,9 +55,26 @@ function TeamChatClient.Init()
 			end
 			
 			if Player.Team == LocalPlayer.Team then
+				local Source = AudioDeviceInput
+				
+				local VoiceEffects = AudioUtil.GetVoiceEffectsForTeam(LocalPlayer.Team)
+				if VoiceEffects then
+					for _, Effect in VoiceEffects do
+						Janitor:Add(
+							AudioUtil.CreateWire(
+								Source,
+								Effect,
+								AudioDeviceOutput
+							)
+						)
+						
+						Source = Effect
+					end
+				end
+				
 				Janitor:Add(
 					AudioUtil.CreateWire(
-						AudioDeviceInput,
+						Source,
 						AudioDeviceOutput
 					)
 				)
