@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>AudioUtil - My Docs</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="generator" content="mkdocs-1.5.3, mkdocs-gitbook-1.0.7">
+
+<link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+<meta name="HandheldFriendly" content="true"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta rel="next" href="" />
+<link href="../../css/style.min.css" rel="stylesheet"> 
+</head>
+
+<body>
+<div class="book">
+<div class="book-summary">
+<div id="book-search-input" role="search">
+<input type="text" placeholder="Type to search" />
+</div> <!-- end of book-search-input -->
+
+<nav role="navigation">
+<ul class="summary">
+<li>
+<a href="../.." target="_blank" class="custom-link">My Docs</a>
+</li>
+<li class="divider"></li>
+<li class="chapter" data-path="">
+<a href="../..">Home</a>
+<li class="header">Api</li>
+
+<li>
+<a href="../" class="">Index</a>
+</li>
+
+<li>
+<a href="./" class="active">AudioUtil</a>
+</li>
+
+<li>
+<a href="../TeamChatClient/" class="">TeamChatClient</a>
+</li>
+
+<li>
+<a href="../TeamChatServer/" class="">TeamChatServer</a>
+</li>
+
+<li class="header">Guide</li>
+
+<li>
+<a href="../../guide/" class="">Overview</a>
+</li>
+
+<li>
+<a href="../../guide/getting-started/" class="">Getting Started</a>
+</li>
+
+<li>
+<a href="../../guide/installation/" class="">Installation</a>
+</li>
+
+<li>
+<a href="#">Examples</a>
+<ul>
+
+<li>
+<a href="../../guide/examples/audio-effects/" class="">Audio effects</a>
+</li>
+
+<li>
+<a href="../../guide/examples/disable-team-voice-chat/" class="">Disable team voice chat</a>
+</li>
+</ul>
+</li>
+
+<li class="divider"></li>
+
+
+
+<li><a href="http://www.mkdocs.org">
+Published with MkDocs
+</a></li>
+
+<li><a href="https://github.com/GitbookIO/theme-default">
+Theme by GitBook
+</a></li>
+</ul>
+
+</nav>
+
+</div> <!-- end of book-summary -->
+
+<div class="book-body">
+<div class="body-inner">
+<div class="book-header" role="navigation">
+
+<!-- Title -->
+<h1>
+<i class="fa fa-circle-o-notch fa-spin"></i>
+<a href="." ></a>
+</h1>
+
+</div> <!-- end of book-header -->
+
+<div class="page-wrapper" tabindex="-1" role="main">
+<div class="page-inner">
+<div id="book-search-results">
+<div class="search-noresults">
+
+<section class="normal markdown-section">
+
+
+
+<h1 id="audioutil">AudioUtil</h1>
+<p>Util library for dealing with the VoiceChatService AudioAPI</p>
+<p>Functions:
+- <a href="AudioUtil.html#audioutil-createwire-source-target-parent">.CreateWire(Source, Target, Parent?)</a>
+- <a href="AudioUtil.html#audioutil-getplayersaudiodeviceinput-player-shouldyield">.GetPlayersAudioDeviceInput(Player, ShouldYield)</a>
+- <a href="AudioUtil.html#audioutil-isvoiceenabledforteam-team">.IsVoiceEnabledForTeam(Team)</a>
+- <a href="AudioUtil.html#audioutil-getvoiceeffectsforteam-team">.GetVoiceEffectsForTeam(Team)</a></p>
+<hr />
+<h2 id="audioutilcreatewiresource-target-parent">AudioUtil.CreateWire(Source, Target, Parent?)</h2>
+<p>Creates a wire connecting an audio stream to an audio receiver</p>
+<p>Parameters:
+- Source: An Instance Emitting an Audio Stream
+- Target: An Instance Receiving an Audio Stream
+- Parent: Any Instance</p>
+<hr />
+<h2 id="audioutilgetplayersaudiodeviceinputplayer-shouldyield">AudioUtil.GetPlayersAudioDeviceInput(Player, ShouldYield)</h2>
+<p>Returns a player's AudioDeviceInput</p>
+<p>Parameters:
+- Player: The player whose AudioDeviceInput you're trying to get
+- ShouldYield: If the function should yield for up to 10 seconds while waiting for the Target Player's AudioDeviceInput to Replicate</p>
+<hr />
+<h2 id="audioutilisvoiceenabledforteamteam">AudioUtil.IsVoiceEnabledForTeam(Team)</h2>
+<p>Returns true if there is no Instance parented to the team named 'VoiceDisabled', else false</p>
+<p>Parameters:
+- Team: The team to check</p>
+<hr />
+<h2 id="audioutilgetvoiceeffectsforteamteam">AudioUtil.GetVoiceEffectsForTeam(Team)</h2>
+<p>Returns the folder of VoiceEffects unter the team if it exists</p>
+<p>Paramters:
+- Team: The team with the VoiceEffects you are trying to get</p>
+
+
+</section>
+</div> <!-- end of search-noresults -->
+<div class="search-results">
+<div class="has-results">
+
+<h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+<ul class="search-results-list"></ul>
+
+</div> <!-- end of has-results -->
+<div class="no-results">
+
+<h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+
+</div> <!-- end of no-results -->
+</div> <!-- end of search-results -->
+</div> <!-- end of book-search-results -->
+
+</div> <!-- end of page-inner -->
+</div> <!-- end of page-wrapper -->
+
+</div> <!-- end of body-inner -->
+
+</div> <!-- end of book-body -->
+<script src="../../js/main.js"></script>
+<script src="../../search/main.js"></script>
+<script src="../../js/gitbook.min.js"></script>
+<script src="../../js/theme.min.js"></script>
+</body>
+</html>
