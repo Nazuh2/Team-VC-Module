@@ -16,7 +16,6 @@ local TeamChat = {}
 
 -- Services
 local RunService = game:GetService('RunService')
-local VoiceChatService = game:GetService('VoiceChatService')
 
 -- Functions
 function TeamChat.Init()

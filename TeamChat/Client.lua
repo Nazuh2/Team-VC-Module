@@ -17,7 +17,7 @@ local IsInitialized = false
 local LocalPlayer = PlayerService.LocalPlayer
 
 local SpeakingCheckInterval = 0.1
-local RmsLevelMinThreshold = 0.01
+local MinRmsLevelThreshold = 0.01
 
 -- Events
 local Remotes = script.Parent.Remotes
@@ -26,6 +26,25 @@ local PlayerStartedSpeaking = Remotes.StartedSpeaking
 local PlayerStoppedSpeaking = Remotes.StoppedSpeaking
 
 -- Functions
+
+--[[ TeamChatClient:header
+# TeamChatClient
+Team Voice Chat System for the client.
+
+Methods:
+- [.Init()](TeamChatClient#TeamChatClient.Init())
+- [:SetSpeakingCheckInterval(Value)](TeamChatClient#TeamChatClient:SetSpeakingCheckInterval(Value))
+- [:GetSpeakingCheckInterval()](TeamChatClient#TeamChatClient:GetSpeakingCheckInterval())
+- [:SetSpeakingCheckInterval(Value)](TeamChatClient#TeamChatClient:SetMinRmsLevelThreshold(Value))
+- [:GetMinRmsLevelThreshold()](TeamChatClient#TeamChatClient:GetMinRmsLevelThreshold())
+--]]
+
+
+--[[ TeamChatClient.Init()
+Called Upon TeamChat.Init() for the client.
+Initializes the Team Voice Chat System on the Client.
+--]]
+
 function TeamChatClient.Init()
 	if IsInitialized then
 		warn('Attempted to reinitialize TeamChatClient!')
@@ -120,7 +139,7 @@ function TeamChatClient.Init()
 		local AudioDeviceInput = AudioUtil.GetPlayersAudioDeviceInput(LocalPlayer)
 		local AudioAnalyzer = AudioDeviceInput:WaitForChild('AudioAnalyzer')
 		
-		local IsSpeaking = AudioAnalyzer.RmsLevel >= RmsLevelMinThreshold
+		local IsSpeaking = AudioAnalyzer.RmsLevel >= MinRmsLevelThreshold
 		
 		if IsSpeaking then
 			if WasSpeaking then -- if they already were speaking, meaning we already notified the server, don't notify the server again
@@ -147,22 +166,44 @@ function TeamChatClient.Init()
 	return TeamChatClient
 end
 
+--[[ TeamChatClient:SetSpeakingCheckInterval(Value)
+Sets the update inverval in which TeamChatClient checks if the local player
+is speaking and if so, tells the server to fire the PlayerStartedSpeaking event.
+
+Parameters:
+- Value: The new value to set 'SpeakingCheckInterval' to
+--]]
+
 function TeamChatClient:SetSpeakingCheckInterval(Value: number)
 	assert(typeof(Value) == 'number', 'SpeakingCheckInterval must be a valid number!')
 
 	SpeakingCheckInterval = Value
 end
 
+--[[ TeamChatClient:GetSpeakingCheckInterval()
+Returns SpeakingCheckInterval
+--]]
+
 function TeamChatClient:GetSpeakingCheckInterval()
 	return SpeakingCheckInterval
 end
 
+--[[ TeamChatClient:SetMinRmsLevelThreshold(Value)
+Sets the Minimum Speaking Volume Threshold.
+
+Parameters:
+- Value: The new value to update 'MinRmsLevelThreshold' to
+--]]
 function TeamChatClient:SetMinRmsLevelThreshold(Value: number)
 	assert(typeof(Value) == 'number', 'MinRmsLevelThreshold must be a valid number!')
 
 	MinRmsLevelThreshold = Value
 end
 
+
+--[[ TeamChatClient:GetMinRmsLevelThreshold()
+Returns MinRmsLevelThreshold
+--]]
 function TeamChatClient:GetMinRmsLevelThreshold()
 	return MinRmsLevelThreshold
 end
