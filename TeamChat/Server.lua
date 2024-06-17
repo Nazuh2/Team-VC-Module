@@ -10,10 +10,10 @@ local Libraries = script.Parent.Libraries
 local AudioUtil = require(Libraries.AudioUtil)
 
 -- Events
-local Remotes = script.Parent.Remotes
-local PlayerChangedTeams = Remotes.TeamChanged
-local PlayerStartedSpeaking = Remotes.StartedSpeaking
-local PlayerStoppedSpeaking = Remotes.StoppedSpeaking
+local Remotes = nil
+local PlayerChangedTeams = nil
+local PlayerStartedSpeaking = nil
+local PlayerStoppedSpeaking = nil
 
 -- Local Variables
 local IsInitialized = false
@@ -26,6 +26,23 @@ function TeamChatServer.Init()
 		warn('Attempted to reinitialize TeamChatServer!')
 		return
 	end
+	
+	-- Setup Remotes
+	Remotes = Instance.new('Folder')
+	Remotes.Name = 'Remotes'
+	Remotes.Parent = script.Parent
+	
+	PlayerChangedTeams = Instance.new('RemoteEvent')
+	PlayerChangedTeams.Name = 'TeamChanged'
+	PlayerChangedTeams.Parent = Remotes
+	
+	PlayerStartedSpeaking = Instance.new('RemoteEvent')
+	PlayerStartedSpeaking.Name = 'StartedSpeaking'
+	PlayerStartedSpeaking.Parent = Remotes
+	
+	PlayerStoppedSpeaking = Instance.new('RemoteEvent')
+	PlayerStoppedSpeaking.Name = 'StoppedSpeaking'
+	PlayerStoppedSpeaking.Parent = Remotes
 	
 	local function PlayerAdded(Player: Player)
 		-- Setup Audio Device Input
