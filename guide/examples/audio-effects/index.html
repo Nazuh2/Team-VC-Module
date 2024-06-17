@@ -524,36 +524,42 @@
 
   <h1>Audio effects</h1>
 
-<p>::: code-group
-```lua [Server.lua]
--- Services
-local TeamService = game:GetService('Teams')</p>
-<p>-- Imports
-local TeamChat = require(path.to.module)</p>
-<p>-- Runtime</p>
-<p>-- Setup Team Effects
+<p>Server</p>
+<pre><code class="language-lua">-- Services
+local TeamService = game:GetService('Teams')
+
+-- Imports
+local TeamChat = require(path.to.module)
+
+-- Runtime
+
+-- Setup Team Effects
 local function CreateEffectFolder(Parent: Team) : Folder
     local Folder = Instance.new('Folder')
     Folder.Name = 'VoiceEffects'
-    Folder.Parent = Parent</p>
-<pre><code>return Folder
+    Folder.Parent = Parent
+
+    return Folder
+end
+
+local BlueTeamFolder = CreateEffectFolder(TeamService.Blue)
+Instance.new('AudioEcho').Parent = BlueTeamFolder
+
+local RedTeamFolder = CreateEffectFolder(TeamService.Red)
+Instance.new('AudioReverb').Parent = RedTeamFolder
+
+local YellowTeamFolder = CreateEffectFolder(TeamService.Yellow)
+Instance.new('AudioChorus').Parent = YellowTeamFolder
+
+local TeamChatServer = TeamChat.Init()
 </code></pre>
-<p>end</p>
-<p>local BlueTeamFolder = CreateEffectFolder(TeamService.Blue)
-Instance.new('AudioEcho').Parent = BlueTeamFolder</p>
-<p>local RedTeamFolder = CreateEffectFolder(TeamService.Red)
-Instance.new('AudioReverb').Parent = RedTeamFolder</p>
-<p>local YellowTeamFolder = CreateEffectFolder(TeamService.Yellow)
-Instance.new('AudioChorus').Parent = YellowTeamFolder</p>
-<p>local TeamChatServer = TeamChat.Init()</p>
-<pre><code>```lua [Client.lua]
--- Imports
+<p>Client</p>
+<pre><code class="language-lua">-- Imports
 local TeamChat = require(path.to.module)
 
 -- Runtime
 local TeamChatClient = TeamChat.Init()
 </code></pre>
-<p>:::</p>
 
 
 
