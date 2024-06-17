@@ -1,6 +1,6 @@
 local AudioUtil = {}
 
-function AudioUtil.CreateWire(Source: Instance, Target: Instance, Parent: Instance?)
+function AudioUtil.CreateWire(Source: Instance, Target: Instance, Parent: Instance?) : Wire
 	local Wire = Instance.new('Wire')
 	Wire.SourceInstance = Source
 	Wire.TargetInstance = Target
@@ -16,6 +16,14 @@ function AudioUtil.GetPlayersAudioDeviceInput(Player: Player, ShouldYield: boole
 	end
 	
 	return Player:FindFirstChild('AudioDeviceInput')
+end
+
+function AudioUtil.IsVoiceEnabledForTeam(Team: Team) : boolean
+	if not Team then
+		return true -- assume that voice is enabled if the there are no teams
+	end
+	
+	return Team:FindFirstChild('VoiceDisabled') == nil
 end
 
 return AudioUtil
