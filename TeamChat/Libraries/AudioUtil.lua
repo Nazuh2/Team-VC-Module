@@ -26,4 +26,17 @@ function AudioUtil.IsVoiceEnabledForTeam(Team: Team) : boolean
 	return Team:FindFirstChild('VoiceDisabled') == nil
 end
 
+function AudioUtil.GetVoiceEffectsForTeam(Team: Team): { Instance }?
+	if not Team then
+		return
+	end
+	
+	local VoiceEffectsFolder = Team:FindFirstChild('VoiceEffects')
+	if not VoiceEffectsFolder then
+		return
+	end
+	
+	return VoiceEffectsFolder:GetChildren()
+end
+
 return AudioUtil
