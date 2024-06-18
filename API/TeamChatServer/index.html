@@ -12,7 +12,7 @@
         <link rel="prev" href="../TeamChatClient/">
       
       
-        <link rel="next" href="../../guide/getting-started/">
+        <link rel="next" href="../VoiceEffectEnum/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -271,6 +271,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../ConfigUtil/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ConfigUtil
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../TeamChatClient/" class="md-nav__link">
         
   
@@ -346,10 +367,67 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#teamchatserversetteamconfigteam-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      TeamChatServer:SetTeamConfig(Team, Config)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teamchatservergetteamconfigteam" class="md-nav__link">
+    <span class="md-ellipsis">
+      TeamChatServer:GetTeamConfig(Team)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teamchatservergetteamconfiginstanceteam" class="md-nav__link">
+    <span class="md-ellipsis">
+      TeamChatServer:GetTeamConfigInstance(Team)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teamchatservergetteamconfigsteam" class="md-nav__link">
+    <span class="md-ellipsis">
+      TeamChatServer:GetTeamConfigs(Team)
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VoiceEffectEnum/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VoiceEffectEnum
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -398,6 +476,27 @@
             Guide
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/basic-usage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic usage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -457,10 +556,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
         
           
-          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -471,8 +570,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
             <span class="md-nav__icon md-icon"></span>
             Examples
           </label>
@@ -570,6 +669,42 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#teamchatserversetteamconfigteam-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      TeamChatServer:SetTeamConfig(Team, Config)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teamchatservergetteamconfigteam" class="md-nav__link">
+    <span class="md-ellipsis">
+      TeamChatServer:GetTeamConfig(Team)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teamchatservergetteamconfiginstanceteam" class="md-nav__link">
+    <span class="md-ellipsis">
+      TeamChatServer:GetTeamConfigInstance(Team)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teamchatservergetteamconfigsteam" class="md-nav__link">
+    <span class="md-ellipsis">
+      TeamChatServer:GetTeamConfigs(Team)
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -587,12 +722,33 @@
 
 <h1 id="teamchatserver">TeamChatServer</h1>
 <p>Team Voice Chat System for the Server.</p>
-<p>Methods:
-- <a href="TeamChatServer#TeamChatServer.Init()">.Init()</a></p>
 <hr />
 <h2 id="teamchatserverinit">TeamChatServer.Init()</h2>
 <p>Called Upon TeamChat.Init() for the Server.
 Initializes the Team Voice Chat System on the Server.</p>
+<p>Returns:
+<br>- TeamChatServer: The TeamChat Server Instance</p>
+<hr />
+<h2 id="teamchatserversetteamconfigteam-config">TeamChatServer:SetTeamConfig(Team, Config)</h2>
+<p>Updates a teams configuration</p>
+<p>Parameters:
+<br>- Team: Team
+<br>- Config: ConfigUtil.Config</p>
+<hr />
+<h2 id="teamchatservergetteamconfigteam">TeamChatServer:GetTeamConfig(Team)</h2>
+<p>Returns the given team's config data</p>
+<p>Returns:
+<br>- Config: ConfigUtil.Config</p>
+<hr />
+<h2 id="teamchatservergetteamconfiginstanceteam">TeamChatServer:GetTeamConfigInstance(Team)</h2>
+<p>Returns the given team's config Instance</p>
+<p>Returns:
+<br>- Configuration: A roblox Configuration Instance</p>
+<hr />
+<h2 id="teamchatservergetteamconfigsteam">TeamChatServer:GetTeamConfigs(Team)</h2>
+<p>Returns the config data for all teams</p>
+<p>Returns:
+<br>- { Config }: An Array of ConfigUtil.Config</p>
 
 
 

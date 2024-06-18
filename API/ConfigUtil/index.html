@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../basic-usage/">
+        <link rel="prev" href="../AudioUtil/">
       
       
-        <link rel="next" href="../installation/">
+        <link rel="next" href="../TeamChatClient/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Getting Started - Team Voice Chat Module</title>
+        <title>ConfigUtil - Team Voice Chat Module</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#getting-started" class="md-skip">
+        <a href="#config" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Getting Started
+              ConfigUtil
             
           </span>
         </div>
@@ -208,19 +208,21 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -234,7 +236,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             API
@@ -248,7 +250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../API/AudioUtil/" class="md-nav__link">
+      <a href="../AudioUtil/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -266,10 +268,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../API/ConfigUtil/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    ConfigUtil
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -278,6 +298,96 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    <span class="md-ellipsis">
+      Config
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voice-effect" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voice Effect
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voice-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voice Type
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configutilreconcileconfigconfigprototype" class="md-nav__link">
+    <span class="md-ellipsis">
+      ConfigUtil.ReconcileConfig(ConfigPrototype)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configutilcreatevoicetypemodulename-voiceeffects" class="md-nav__link">
+    <span class="md-ellipsis">
+      ConfigUtil.CreateVoiceType(ModuleName, VoiceEffects)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configutilgetdefaultconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      ConfigUtil.GetDefaultConfig()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configutilcreatevoiceeffecteffectname-effectproperties" class="md-nav__link">
+    <span class="md-ellipsis">
+      ConfigUtil.CreateVoiceEffect(EffectName, EffectProperties)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configutilgetvoicetypeenum" class="md-nav__link">
+    <span class="md-ellipsis">
+      ConfigUtil.GetVoiceTypeEnum()
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -290,7 +400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../API/TeamChatClient/" class="md-nav__link">
+      <a href="../TeamChatClient/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -311,7 +421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../API/TeamChatServer/" class="md-nav__link">
+      <a href="../TeamChatServer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -332,7 +442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../API/VoiceEffectEnum/" class="md-nav__link">
+      <a href="../VoiceEffectEnum/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -357,21 +467,19 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -385,7 +493,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Guide
@@ -399,7 +507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../basic-usage/" class="md-nav__link">
+      <a href="../../guide/basic-usage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -417,19 +525,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../guide/getting-started/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -438,7 +537,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -451,7 +549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../installation/" class="md-nav__link">
+      <a href="../../guide/installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -509,7 +607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../examples/audio-effects/" class="md-nav__link">
+      <a href="../../guide/examples/audio-effects/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -530,7 +628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../examples/disable-team-voice-chat/" class="md-nav__link">
+      <a href="../../guide/examples/disable-team-voice-chat/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -576,8 +674,86 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    <span class="md-ellipsis">
+      Config
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voice-effect" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voice Effect
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voice-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voice Type
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configutilreconcileconfigconfigprototype" class="md-nav__link">
+    <span class="md-ellipsis">
+      ConfigUtil.ReconcileConfig(ConfigPrototype)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configutilcreatevoicetypemodulename-voiceeffects" class="md-nav__link">
+    <span class="md-ellipsis">
+      ConfigUtil.CreateVoiceType(ModuleName, VoiceEffects)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configutilgetdefaultconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      ConfigUtil.GetDefaultConfig()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configutilcreatevoiceeffecteffectname-effectproperties" class="md-nav__link">
+    <span class="md-ellipsis">
+      ConfigUtil.CreateVoiceEffect(EffectName, EffectProperties)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configutilgetvoicetypeenum" class="md-nav__link">
+    <span class="md-ellipsis">
+      ConfigUtil.GetVoiceTypeEnum()
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -592,22 +768,59 @@
                   
 
 
-<h1 id="getting-started">Getting Started</h1>
-<p>The setup is quite simple, you just need to require TeamChat and call the <code>.Init()</code> function.</p>
-<p>Server
-<div class="highlight"><pre><span></span><code><span class="c1">-- Imports</span>
-<span class="kd">local</span> <span class="n">TeamChat</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">path</span><span class="p">.</span><span class="n">to</span><span class="p">.</span><span class="n">module</span><span class="p">)</span>
+  <h1>ConfigUtil</h1>
 
-<span class="c1">-- Runtime</span>
-<span class="kd">local</span> <span class="n">TeamChatServer</span> <span class="o">=</span> <span class="n">TeamChat</span><span class="p">.</span><span class="n">Init</span><span class="p">()</span>
-</code></pre></div></p>
-<p>Client
-<div class="highlight"><pre><span></span><code><span class="c1">-- Imports</span>
-<span class="kd">local</span> <span class="n">TeamChat</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">path</span><span class="p">.</span><span class="n">to</span><span class="p">.</span><span class="n">module</span><span class="p">)</span>
-
-<span class="c1">-- Runtime</span>
-<span class="kd">local</span> <span class="n">TeamChatClient</span> <span class="o">=</span> <span class="n">TeamChat</span><span class="p">.</span><span class="n">Init</span><span class="p">()</span>
-</code></pre></div></p>
+<p>Util library to assist with creating and manipulating configs</p>
+<h2 id="config">Config</h2>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="n">VoiceTypes</span><span class="p">:</span> <span class="p">{</span> <span class="n">VoiceType</span> <span class="p">},</span>
+<span class="n">VoiceEnabled</span><span class="p">:</span> <span class="n">boolean</span><span class="err">?</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="voice-effect">Voice Effect</h2>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="n">Object</span><span class="p">:</span> <span class="n">Instance</span><span class="p">,</span>
+<span class="n">Properties</span><span class="p">:</span> <span class="p">{</span>
+<span class="p">[</span><span class="n">string</span><span class="p">]:</span> <span class="n">any</span>
+<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="voice-type">Voice Type</h2>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="n">Type</span><span class="p">:</span> <span class="n">string</span><span class="p">,</span>
+<span class="n">VoiceEffects</span><span class="p">:</span> <span class="p">{</span> <span class="n">VoiceEffect</span> <span class="p">}</span><span class="err">?</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="configutilreconcileconfigconfigprototype">ConfigUtil.ReconcileConfig(ConfigPrototype)</h2>
+<p>Takes in the given config prototype and returns a reconciled version</p>
+<p>Parameters:
+<br>- ConfigPrototype: The config data to reconcile against the default config</p>
+<p>Returns:
+<br>- Config: A reconciled version of ConfigPrototype</p>
+<hr />
+<h2 id="configutilcreatevoicetypemodulename-voiceeffects">ConfigUtil.CreateVoiceType(ModuleName, VoiceEffects)</h2>
+<p>Parameters:
+<br>- ModuleName: a name to refer to a module inside of TeamChat.VoiceTypes
+<br>- VoiceEffects: an optional field to put the voice effects for this module</p>
+<p>Returns:
+<br>- VoiceType: The created voice type</p>
+<hr />
+<h2 id="configutilgetdefaultconfig">ConfigUtil.GetDefaultConfig()</h2>
+<p>Returns:
+<br>- Config: The Default Config used when reconciling</p>
+<hr />
+<h2 id="configutilcreatevoiceeffecteffectname-effectproperties">ConfigUtil.CreateVoiceEffect(EffectName, EffectProperties)</h2>
+<p>Creates a VoiceEffect Object for use in a config</p>
+<p>Parameters:
+<br>- EffectName: The name of the effect you want to create. Must refer to a valid effect name! refer to VoiceEffectEnum for more info.
+<br>- EffectProperties: A list of properties to apply to the effect upon creation. Invalid properties will error, but won't halt the effect creation process</p>
+<p>Returns:
+<br>- VoiceEffect: A VoiceEffect object</p>
+<hr />
+<h2 id="configutilgetvoicetypeenum">ConfigUtil.GetVoiceTypeEnum()</h2>
+<p>Returns:
+<br>- Enum: a frozen version of the VoiceTypeEnum</p>
 
 
 

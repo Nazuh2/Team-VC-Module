@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../basic-usage/">
+        <link rel="prev" href="../../API/VoiceEffectEnum/">
       
       
-        <link rel="next" href="../installation/">
+        <link rel="next" href="../getting-started/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Getting Started - Team Voice Chat Module</title>
+        <title>Basic usage - Team Voice Chat Module</title>
       
     
     
@@ -61,11 +61,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#getting-started" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -98,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Getting Started
+              Basic usage
             
           </span>
         </div>
@@ -396,27 +391,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../basic-usage/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Basic usage
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -426,10 +400,30 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
       <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Basic usage
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -438,7 +432,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -576,8 +569,6 @@
   
   
   
-    
-  
   
 </nav>
                   </div>
@@ -592,22 +583,52 @@
                   
 
 
-<h1 id="getting-started">Getting Started</h1>
-<p>The setup is quite simple, you just need to require TeamChat and call the <code>.Init()</code> function.</p>
-<p>Server
-<div class="highlight"><pre><span></span><code><span class="c1">-- Imports</span>
-<span class="kd">local</span> <span class="n">TeamChat</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">path</span><span class="p">.</span><span class="n">to</span><span class="p">.</span><span class="n">module</span><span class="p">)</span>
+  <h1>Basic usage</h1>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Server</label><label for="__tabbed_1_2">Client</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1">-- Services</span>
+<span class="kd">local</span> <span class="n">TeamService</span> <span class="o">=</span> <span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s1">&#39;Teams&#39;</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">ReplicatedStorage</span> <span class="o">=</span> <span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s1">&#39;ReplicatedStorage&#39;</span><span class="p">)</span>
+
+<span class="c1">-- Imports</span>
+<span class="kd">local</span> <span class="n">TeamChat</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">Path</span><span class="p">.</span><span class="n">To</span><span class="p">.</span><span class="n">Module</span><span class="p">)</span>
+
+<span class="kd">local</span> <span class="n">Libraries</span> <span class="o">=</span> <span class="n">Path</span><span class="p">.</span><span class="n">To</span><span class="p">.</span><span class="n">Module</span><span class="p">.</span><span class="n">Libraries</span>
+<span class="kd">local</span> <span class="n">ConfigUtil</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">Libraries</span><span class="p">.</span><span class="n">ConfigUtil</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">VoiceEffectEnum</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">Libraries</span><span class="p">.</span><span class="n">VoiceEffectEnum</span><span class="p">)</span>
+
+<span class="c1">-- Local Variables</span>
+<span class="kd">local</span> <span class="n">VoiceTypeEnum</span> <span class="o">=</span> <span class="n">ConfigUtil</span><span class="p">.</span><span class="n">GetVoiceTypeEnum</span><span class="p">()</span>
 
 <span class="c1">-- Runtime</span>
 <span class="kd">local</span> <span class="n">TeamChatServer</span> <span class="o">=</span> <span class="n">TeamChat</span><span class="p">.</span><span class="n">Init</span><span class="p">()</span>
-</code></pre></div></p>
-<p>Client
+
+<span class="c1">-- Create Team</span>
+<span class="kd">local</span> <span class="n">Team</span> <span class="o">=</span> <span class="n">Instance</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="s1">&#39;Team&#39;</span><span class="p">)</span>
+<span class="n">Team</span><span class="p">.</span><span class="n">Name</span> <span class="o">=</span> <span class="s1">&#39;DefaultTeam&#39;</span>
+<span class="n">Team</span><span class="p">.</span><span class="n">AutoAssignable</span> <span class="o">=</span> <span class="kc">true</span>
+<span class="n">Team</span><span class="p">.</span><span class="n">Parent</span> <span class="o">=</span> <span class="n">TeamService</span>
+
+<span class="c1">-- Customize Team Voice Configs</span>
+<span class="n">TeamChatServer</span><span class="p">:</span><span class="n">SetTeamConfig</span><span class="p">(</span><span class="n">Team</span><span class="p">,</span> <span class="p">{</span>
+    <span class="n">VoiceTypes</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">ConfigUtil</span><span class="p">.</span><span class="n">CreateVoiceType</span><span class="p">(</span><span class="n">VoiceTypeEnum</span><span class="p">.</span><span class="n">TeamDirect</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">})</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="c1">-- Imports</span>
-<span class="kd">local</span> <span class="n">TeamChat</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">path</span><span class="p">.</span><span class="n">to</span><span class="p">.</span><span class="n">module</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">TeamChat</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">Path</span><span class="p">.</span><span class="n">To</span><span class="p">.</span><span class="n">Module</span><span class="p">)</span>
 
 <span class="c1">-- Runtime</span>
 <span class="kd">local</span> <span class="n">TeamChatClient</span> <span class="o">=</span> <span class="n">TeamChat</span><span class="p">.</span><span class="n">Init</span><span class="p">()</span>
-</code></pre></div></p>
+</code></pre></div>
+</div>
+</div>
+</div>
 
 
 

@@ -235,6 +235,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#update-200" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update 2.0.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#update-120" class="md-nav__link">
     <span class="md-ellipsis">
       Update 1.2.0
@@ -334,6 +343,27 @@
   
   
     <li class="md-nav__item">
+      <a href="API/ConfigUtil/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ConfigUtil
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="API/TeamChatClient/" class="md-nav__link">
         
   
@@ -360,6 +390,27 @@
   
   <span class="md-ellipsis">
     TeamChatServer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="API/VoiceEffectEnum/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VoiceEffectEnum
   </span>
   
 
@@ -420,6 +471,27 @@
   
   
     <li class="md-nav__item">
+      <a href="guide/basic-usage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic usage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="guide/getting-started/" class="md-nav__link">
         
   
@@ -471,10 +543,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
         
           
-          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -485,8 +557,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
             <span class="md-nav__icon md-icon"></span>
             Examples
           </label>
@@ -576,6 +648,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#update-200" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update 2.0.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#update-120" class="md-nav__link">
     <span class="md-ellipsis">
       Update 1.2.0
@@ -619,8 +700,15 @@
 
 <h1 id="team-voice-chat-module">Team Voice Chat Module</h1>
 <p>A lightweight, customizable and efficient Team Voice Chat Module.</p>
+<h2 id="update-200">Update 2.0.0</h2>
+<ul>
+<li>Added TeamChatServer:SetTeamConfig(...) to handle updating a teams voice config</li>
+<li>Added Voice Types (Essentially just modules that can be set for a team using TeamChatServer:SetTeamConfig(...) to depict how voice chat works for a team e.g. enemy proximity chat)</li>
+<li>Changed how Voice Effects work. They are now binded to VoiceTypes instead of the entire team. You can do some really cool stuff with this, for example if you're making a horror game you could have to hunter have an audio effect that makes their voice sound scary, while you'd still be able to hear your teamates just fine.</li>
+<li>Removed support for team wide voice effects in favor of VoiceType binded voice effects.</li>
+</ul>
 <h2 id="update-120">Update 1.2.0</h2>
-<p>Added Support for Audio Effects</p>
+<p>Added Support for Voice Effects</p>
 <h2 id="update-110">Update 1.1.0</h2>
 <p>Added Support for developers to have Teams with voice chat disabled</p>
 <h2 id="update-100">Update 1.0.0</h2>
