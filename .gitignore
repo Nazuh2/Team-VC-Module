@@ -1,3 +1,6 @@
 docs/.vitepress/dist
 docs/.vitepress/cache
 parse.py
+
+docs/*
+docs
